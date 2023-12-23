@@ -13,10 +13,10 @@ warnings.filterwarnings('ignore')
 
 logging.basicConfig(filename='pso.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
 parser = argparse.ArgumentParser()
-parser.add_argument('--n_particles', type=int, default=21)
+parser.add_argument('--n_particles', type=int, default=20)
 parser.add_argument('--inertia', type=float, default=0.9)
-parser.add_argument('--cognitive_constant', type=float, default=2)
-parser.add_argument('--social_constant', type=float, default=2)
+parser.add_argument('--cognitive_constant', type=float, default=1.4945)
+parser.add_argument('--social_constant', type=float, default=1.4945)
 parser.add_argument('--max_iter', type=int, default=100)
 parser.add_argument('--max_inertia', type=float, default=0.9)
 parser.add_argument('--min_inertia', type=float, default=0.4)
@@ -27,17 +27,24 @@ parser.add_argument('--dataset-test', type=str, default='diabetes_test.csv')
 parser.add_argument('--target-variable', type=str, default='Outcome')
 parser.add_argument('--no-classes', type=int, default=2)
 
+
 def softmax(x):
     cp = copy.deepcopy(x)
     return np.exp(cp) / np.sum(np.exp(cp),axis=0)
+
+def encode_one_hot(x,no_classes):
+    encoded = np.zeros((x.shape[0],no_classes),dtype=np.float64)
+    for i in range(x.shape[0]):
+        encoded[i][x[i]] = 1
+    return encoded
 
 
 class Particle:
     def __init__(self,clfs,initial_fitness,no_classes) -> None:
         self.dimension = len(clfs)
         self.classifiers = clfs
-        self.position = np.random.uniform(low=-5, high=5,size=(self.dimension,))
-        self.velocity = np.random.uniform(low=-10, high=10,size=(self.dimension,))
+        self.position = np.random.uniform(low=-1, high=1,size=(self.dimension,))
+        self.velocity = np.random.uniform(low=-1, high=1,size=(self.dimension,))
         self.best_individual_position = self.position
         self.fitness_particle_position = initial_fitness
         self.fitness_best_individual_position = initial_fitness
@@ -48,14 +55,16 @@ class Particle:
         ensemble_y_pred = np.zeros((y.shape[0],self.no_classes),dtype=np.float64)
         
         for i,classifier in enumerate(self.classifiers):
-            y_pred = classifier.predict_proba(x)
-            weighted_y_pred = normalized_position[i] * y_pred
-            ensemble_y_pred += weighted_y_pred
+            y_pred = classifier.predict(x)
+            y_pred_one_hot = encode_one_hot(y_pred,self.no_classes)
+            ensemble_y_pred += normalized_position[i] * y_pred_one_hot  
             
         # np.round(ensemble_y_pred,decimals=0,out=ensemble_y_pred)
         ensemble_y_pred = np.argmax(ensemble_y_pred,axis=1)
-        return metrics.accuracy_score(y,ensemble_y_pred)
-    
+        accuracy = metrics.accuracy_score(y,ensemble_y_pred)
+        # print(f'Accuracy for particle: {accuracy}')
+        return accuracy
+        
     def evaluate(self,x,y):
         self.fitness_particle_position = self.objective_function(x,y)
         if self.fitness_particle_position > self.fitness_best_individual_position or self.fitness_best_individual_position == -float('inf'):
@@ -118,7 +127,7 @@ class PSO():
             no_improvement = 0
             early_stop = False
             for i in range(len(best_positions)-1,1,-1):
-                if no_improvement == 30:
+                if no_improvement == 10:
                     early_stop = True
                 if best_positions[i][0] == best_positions[i-1][0]:
                     no_improvement += 1
@@ -162,12 +171,12 @@ HYPERPARAMETERS = {
 }
 
 
-def train_base_classifiers(x_train,y_train,n_particles):
+def train_base_classifiers(x_train,y_train,n_classifiers=51):
     classifiers = []
-    for i in range(n_particles):
+    for i in range(n_classifiers):
         hyperparameters = {}
         for hyperparameter in HYPERPARAMETERS:
-            hyperparameters[hyperparameter] = random.choice(HYPERPARAMETERS[hyperparameter])
+            hyperparameters[hyperparameter] = HYPERPARAMETERS[hyperparameter][i % len(HYPERPARAMETERS[hyperparameter])]
         classifier = DecisionTreeClassifier(**hyperparameters)
         logging.warning(f'Training classifier {i+1} with hyperparameters {hyperparameters}')
         classifier.fit(x_train,y_train)
@@ -182,9 +191,9 @@ def predict_unweighted_ensemble(classifiers,x,y,no_classes):
     
     weight = 1 / len(classifiers)
     for i,classifier in enumerate(classifiers):
-        y_pred = classifier.predict_proba(x)
-        weighted_y_pred = weight * y_pred
-        ensemble_y_pred += weighted_y_pred
+        y_pred = classifier.predict(x)
+        y_pred_one_hot = encode_one_hot(y_pred,no_classes)
+        ensemble_y_pred += weight * y_pred_one_hot
         
     # np.round(ensemble_y_pred,decimals=0,out=ensemble_y_pred)
     ensemble_y_pred = np.argmax(ensemble_y_pred,axis=1)
@@ -205,7 +214,7 @@ def main():
     x_val,y_val = split_x_y(df_val,target_variable)
     x_test,y_test = split_x_y(df_test,target_variable)
     
-    classifiers = train_base_classifiers(x_train,y_train,n_particles)
+    classifiers = train_base_classifiers(x_train,y_train)
     
     if mode == 'max':
         initial_fitness = -float('inf')
