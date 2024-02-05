@@ -1,0 +1,69 @@
+MSE for XGBRegressor on test data: 164218254.07020304
+MSE for CatBoostRegressor on test data: 168756505.8799495
+MSE for RandomForestRegressor on test data: 165466014.41486704
+PSO Paramaters:
+Number of particles: 30, Cognitive Constant: 2.05, Social Constant: 2.05, Max Iterations: 100, Max Inertia: 0.9, Min Inertia: 0.4
+Maximum objective function for validation data: 150653703.7872773
+MSE for unweighted ensemble on test data: 156380260.86762708
+MSE for swarm on test data: 155493683.0724699
+Models weights: [0.487 0.    0.513]
+
+MSE for XGBRegressor on test data: 164218254.07020304
+MSE for CatBoostRegressor on test data: 168756505.8799495
+MSE for RandomForestRegressor on test data: 164582235.7064308
+PSO Paramaters:
+Number of particles: 30, Cognitive Constant: 2.05, Social Constant: 2.05, Max Iterations: 100, Max Inertia: 0.9, Min Inertia: 0.2
+Maximum objective function for validation data: 152647420.77700284
+MSE for unweighted ensemble on test data: 156300240.396644
+MSE for swarm on test data: 155260521.10938638
+Models weights: [0.396 0.162 0.441]
+
+MSE for XGBRegressor on test data: 164218254.07020304
+MSE for CatBoostRegressor on test data: 168756505.8799495
+MSE for RandomForestRegressor on test data: 164050579.71427053
+PSO Paramaters:
+Number of particles: 30, Cognitive Constant: 1.4945, Social Constant: 1.4945, Max Iterations: 100, Max Inertia: 0.9, Min Inertia: 0.2
+Maximum objective function for validation data: 152214511.25264135
+MSE for unweighted ensemble on test data: 155895151.29009253
+MSE for swarm on test data: 154773818.25071222
+Models weights: [0.386 0.165 0.449]
+
+MSE for XGBRegressor on test data: 164218254.07020304
+MSE for LGBMRegressor on test data: 140604104.88513103
+MSE for CatBoostRegressor on test data: 168756505.8799495
+MSE for RandomForestRegressor on test data: 165456659.90807813
+MSE for Ridge on test data: 223736376.93930846
+MSE for AdaBoostRegressor on test data: 107452694.89888044
+PSO Paramaters:
+Number of particles: 30, Cognitive Constant: 2.05, Social Constant: 2.05, Max Iterations: 100, Max Inertia: 0.9, Min Inertia: 0.2
+Maximum objective function for validation data: 125751392.84360923
+MSE for unweighted ensemble on test data: 141286478.01704165
+MSE for swarm on test data: 127927484.99908876
+Models weights: [0.13  0.129 0.13  0.13  0.13  0.351]
+
+MSE for XGBRegressor on test data: 164218254.07020304
+MSE for LGBMRegressor on test data: 140604104.88513103
+MSE for CatBoostRegressor on test data: 168756505.8799495
+MSE for RandomForestRegressor on test data: 165292703.21822456
+MSE for Ridge on test data: 223736376.93930846
+MSE for AdaBoostRegressor on test data: 110726212.76639618
+PSO Paramaters:
+Number of particles: 30, Cognitive Constant: 1.4945, Social Constant: 2.05, Max Iterations: 100, Max Inertia: 0.9, Min Inertia: 0.4
+Maximum objective function for validation data: 127354733.5599831
+MSE for unweighted ensemble on test data: 141915955.40773934
+MSE for swarm on test data: 129303405.8766711
+Models weights: [0.13  0.13  0.13  0.13  0.13  0.352]
+
+MSE for XGBRegressor on test data: 164218254.07020304
+MSE for LGBMRegressor on test data: 140604104.88513103
+MSE for CatBoostRegressor on test data: 168756505.8799495
+MSE for RandomForestRegressor on test data: 163996219.2463699
+MSE for Ridge on test data: 223736376.93930846
+MSE for AdaBoostRegressor on test data: 106446451.38791694
+PSO Paramaters:
+Number of particles: 30, Cognitive Constant: 2.05, Social Constant: 1.4945, Max Iterations: 100, Max Inertia: 0.9, Min Inertia: 0.4
+Maximum objective function for validation data: 127453261.33439347
+MSE for unweighted ensemble on test data: 141087281.4311157
+MSE for swarm on test data: 130871692.75876844
+Models weights: [0.148 0.147 0.14  0.148 0.124 0.295]
+
