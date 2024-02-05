@@ -1,0 +1,72 @@
+
+PSO params: n_particles=100, inertia=0.9, cognitive_constant=2.05, social_constant=2.05, max_iter=200, max_inertia=0.9, min_inertia=0.2
+Maximum objective function for validation data: (0.7467532467532467, array([0.24347927, 0.52465163, 0.2318691 ]))
+Accuracy for unweighted ensemble: 0.7727272727272727
+Accuracy for classifier LogisticRegression: 0.7662337662337663
+Accuracy for classifier CatBoostClassifier: 0.7662337662337663
+Accuracy for classifier XGBClassifier: 0.7662337662337663
+Accuracy for PSO: 0.7662337662337663
+
+PSO params: n_particles=100, inertia=0.9, cognitive_constant=2.05, social_constant=2.05, max_iter=200, max_inertia=0.9, min_inertia=0.4
+Maximum objective function for validation data: (0.7467532467532467, array([0.25580844, 0.5115853 , 0.23260625]))
+Accuracy for unweighted ensemble: 0.7727272727272727
+Accuracy for classifier LogisticRegression: 0.7662337662337663
+Accuracy for classifier CatBoostClassifier: 0.7662337662337663
+Accuracy for classifier XGBClassifier: 0.7662337662337663
+Accuracy for PSO: 0.7662337662337663
+
+PSO params: n_particles=100, inertia=0.9, cognitive_constant=1.4945, social_constant=1.4945, max_iter=200, max_inertia=0.9, min_inertia=0.2
+Maximum objective function for validation data: (0.7467532467532467, array([0.26983263, 0.51580465, 0.21436273]))
+Accuracy for unweighted ensemble: 0.7727272727272727
+Accuracy for classifier LogisticRegression: 0.7662337662337663
+Accuracy for classifier CatBoostClassifier: 0.7662337662337663
+Accuracy for classifier XGBClassifier: 0.7662337662337663
+Accuracy for PSO: 0.7662337662337663
+
+PSO params: n_particles=100, inertia=0.9, cognitive_constant=2.05, social_constant=2.05, max_iter=200, max_inertia=0.9, min_inertia=0.2
+Maximum objective function for validation data: (0.7142857142857143, array([0.53330303, 0.22101629, 0.24568068]))
+Accuracy for unweighted ensemble: 0.7662337662337663
+Accuracy for classifier AdaBoostClassifier: 0.7922077922077922
+Accuracy for classifier KNeighborsClassifier: 0.7402597402597403
+Accuracy for classifier SVC: 0.7272727272727273
+Accuracy for PSO: 0.7922077922077922
+
+PSO params: n_particles=100, inertia=0.9, cognitive_constant=2.05, social_constant=2.05, max_iter=200, max_inertia=0.9, min_inertia=0.4
+Maximum objective function for validation data: (0.7142857142857143, array([0.50401201, 0.21039136, 0.28559663]))
+Accuracy for unweighted ensemble: 0.7662337662337663
+Accuracy for classifier AdaBoostClassifier: 0.7922077922077922
+Accuracy for classifier KNeighborsClassifier: 0.7402597402597403
+Accuracy for classifier SVC: 0.7272727272727273
+Accuracy for PSO: 0.7922077922077922
+
+PSO params: n_particles=100, inertia=0.9, cognitive_constant=1.4945, social_constant=1.4945, max_iter=200, max_inertia=0.9, min_inertia=0.2
+Maximum objective function for validation data: (0.7142857142857143, array([0.52691315, 0.26097911, 0.21210774]))
+Accuracy for unweighted ensemble: 0.7662337662337663
+Accuracy for classifier AdaBoostClassifier: 0.7922077922077922
+Accuracy for classifier KNeighborsClassifier: 0.7402597402597403
+Accuracy for classifier SVC: 0.7272727272727273
+Accuracy for PSO: 0.7922077922077922
+
+PSO params: n_particles=100, inertia=0.9, cognitive_constant=2.05, social_constant=2.05, max_iter=100, max_inertia=0.9, min_inertia=0.2
+Maximum objective function for validation data: (0.7142857142857143, array([0.33692928, 0.27383181, 0.38923891]))
+Accuracy for unweighted ensemble: 0.7662337662337663
+Accuracy for classifier AdaBoostClassifier: 0.7922077922077922
+Accuracy for classifier KNeighborsClassifier: 0.7402597402597403
+Accuracy for classifier SVC: 0.7272727272727273
+Accuracy for PSO: 0.7662337662337663
+
+PSO params: n_particles=100, inertia=0.9, cognitive_constant=2.05, social_constant=2.05, max_iter=200, max_inertia=0.9, min_inertia=0.2
+Maximum objective function for validation data: (0.7142857142857143, array([0.35869264, 0.39044991, 0.25085745]))
+Accuracy for unweighted ensemble: 0.7662337662337663
+Accuracy for classifier AdaBoostClassifier: 0.7922077922077922
+Accuracy for classifier KNeighborsClassifier: 0.7402597402597403
+Accuracy for classifier SVC: 0.7272727272727273
+Accuracy for PSO: 0.7662337662337663
+
+PSO params: n_particles=100, inertia=0.9, cognitive_constant=2.05, social_constant=2.05, max_iter=200, max_inertia=0.9, min_inertia=0.2
+Maximum objective function for validation data: (0.7142857142857143, array([0.4482963 , 0.28344656, 0.26825715]))
+Accuracy for unweighted ensemble: 0.7662337662337663
+Accuracy for classifier AdaBoostClassifier: 0.7922077922077922
+Accuracy for classifier KNeighborsClassifier: 0.7402597402597403
+Accuracy for classifier SVC: 0.7272727272727273
+Accuracy for PSO: 0.7662337662337663
