@@ -1,0 +1,20 @@
+Pytorch RNN
+Trained for 10 epochs
+Pytorch MAE: 211.00515747070312
+Pytorch RNN
+Trained for 30 epochs
+Pytorch MAE: 213.00515747070312
+Pytorch RNN
+Trained for 100 epochs
+Pytorch MAE: 213.00515747070312
+
+PSO params:
+N_particles: 30, Inertia: 0.9, Cognitive constant: 2.05, Social constant: 2.05, Max iter: 30, Max inertia: 0.9, Min inertia: 0.4
+PSO MAE: 135.80641839683386
+PSO params:
+N_particles: 30, Inertia: 0.9, Cognitive constant: 2.05, Social constant: 2.05, Max iter: 30, Max inertia: 0.9, Min inertia: 0.2
+PSO MAE: 122.97286992301325
+PSO params:
+N_particles: 30, Inertia: 0.9, Cognitive constant: 2.5, Social constant: 2.5, Max iter: 40, Max inertia: 0.9, Min inertia: 0.2
+PSO MAE: 122.43175307757456PSO parameters:
+Number of particles: 50, cognitive constant: 2.05, social constant: 2.05, max iterations: 100, max inertia: 0.9, min inertia: 0.2

@@ -1,0 +1,106 @@
+PSO params:
+n_particles: 200, cognitive_constant: 2.05, social_constant: 2.05, max_iter: 400, max_inertia: 0.9, min_inertia: 0.2, mode: max
+Accuracy on test set: 0.685064935064935
+Accuracy on train set: 0.7152173913043478
+Cofusion matrix on test set: [[178   9]
+ [ 88  33]]
+---------------------------------------------------
+PSO params:
+n_particles: 300, cognitive_constant: 2.05, social_constant: 2.05, max_iter: 400, max_inertia: 0.9, min_inertia: 0.2, mode: max
+Accuracy on test set: 0.6071428571428571
+Accuracy on train set: 0.7130434782608696
+Cofusion matrix on test set: [[155  32]
+ [ 89  32]]
+---------------------------------------------------
+PSO params:
+n_particles: 400, cognitive_constant: 2.05, social_constant: 2.05, max_iter: 800, max_inertia: 0.9, min_inertia: 0.2, mode: max
+Accuracy on test set: 0.6428571428571429
+Accuracy on train set: 0.7195652173913043
+Cofusion matrix on test set: [[162  25]
+ [ 85  36]]
+---------------------------------------------------
+PSO params:
+n_particles: 30, cognitive_constant: 2.05, social_constant: 2.05, max_iter: 200, max_inertia: 0.9, min_inertia: 0.2, mode: max
+Accuracy on test set: 0.5811688311688312
+Accuracy on train set: 0.7217391304347827
+Cofusion matrix on test set: [[165  22]
+ [107  14]]
+---------------------------------------------------
+PSO params:
+n_particles: 50, cognitive_constant: 2.05, social_constant: 2.05, max_iter: 200, max_inertia: 0.9, min_inertia: 0.2, mode: max
+Accuracy on test set: 0.6136363636363636
+Accuracy on train set: 0.7065217391304348
+Cofusion matrix on test set: [[154  33]
+ [ 86  35]]
+---------------------------------------------------
+PSO params:
+n_particles: 200, cognitive_constant: 2.05, social_constant: 2.05, max_iter: 400, max_inertia: 0.9, min_inertia: 0.2, mode: max
+Accuracy on test set: 0.6233766233766234
+Accuracy on train set: 0.7152173913043478
+Cofusion matrix on test set: [[146  41]
+ [ 75  46]]
+---------------------------------------------------
+PSO params:
+n_particles: 200, cognitive_constant: 2.05, social_constant: 2.05, max_iter: 300, max_inertia: 0.9, min_inertia: 0.2, mode: max
+Accuracy on test set: 0.6331168831168831
+Accuracy on train set: 0.7217391304347827
+Cofusion matrix on test set: [[175  12]
+ [101  20]]
+---------------------------------------------------
+PSO params:
+n_particles: 200, cognitive_constant: 2.05, social_constant: 2.05, max_iter: 400, max_inertia: 0.9, min_inertia: 0.4, mode: max
+Accuracy on test set: 0.6136363636363636
+Accuracy on train set: 0.7195652173913043
+Cofusion matrix on test set: [[163  24]
+ [ 95  26]]
+---------------------------------------------------
+PSO params:
+n_particles: 200, cognitive_constant: 2.05, social_constant: 2.05, max_iter: 400, max_inertia: 0.9, min_inertia: 0.1, mode: max
+Accuracy on test set: 0.6590909090909091
+Accuracy on train set: 0.7152173913043478
+Cofusion matrix on test set: [[148  39]
+ [ 66  55]]
+---------------------------------------------------
+
+Sklearn ANN
+2 hidden layers with 30 neurons each, relu activation function and trained for 1000 epcochs
+Train score: 0.741304347826087
+Test score: 0.6655844155844156
+Confusion matrix: [[146  41]
+ [ 62  59]]
+--------------------------------
+Sklearn ANN
+2 hidden layers with 30 neurons each, relu activation function and trained for 10000 epcochs
+Train score: 0.7217391304347827
+Test score: 0.6785714285714286
+Confusion matrix: [[165  22]
+ [ 77  44]]
+--------------------------------
+Sklearn ANN
+2 hidden layers with 30 neurons each, relu activation function and trained for 100000 epcochs
+Train score: 0.6956521739130435
+Test score: 0.6298701298701299
+Confusion matrix: [[181   6]
+ [108  13]]
+--------------------------------
+Sklearn ANN
+2 hidden layers with 30 neurons each, relu activation function and trained for 1000000 epcochs
+Train score: 0.7478260869565218
+Test score: 0.6753246753246753
+Confusion matrix: [[149  38]
+ [ 62  59]]
+--------------------------------
+Sklearn ANN
+2 hidden layers with 30 neurons each, relu activation function and trained for 10000000 epcochs
+Train score: 0.7065217391304348
+Test score: 0.6168831168831169
+Confusion matrix: [[181   6]
+ [112   9]]
+--------------------------------
+Sklearn ANN
+2 hidden layers with 30 neurons each, relu activation function and trained for 100 epcochs
+Train score: 0.7434782608695653
+Test score: 0.6461038961038961
+Confusion matrix: [[168  19]
+ [ 90  31]]
+--------------------------------
